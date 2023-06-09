@@ -1,0 +1,11 @@
+G:\NewDesktop\MedicalRecord\MedicalRecord\bin\Debug\MedicalRecord.exe
+G:\NewDesktop\MedicalRecord\MedicalRecord\bin\Debug\MedicalRecord.pdb
+G:\NewDesktop\MedicalRecord\MedicalRecord\obj\Debug\MedicalRecord.csprojResolveAssemblyReference.cache
+G:\NewDesktop\MedicalRecord\MedicalRecord\obj\Debug\MedicalRecord.DeshBoard.resources
+G:\NewDesktop\MedicalRecord\MedicalRecord\obj\Debug\MedicalRecord.Properties.Resources.resources
+G:\NewDesktop\MedicalRecord\MedicalRecord\obj\Debug\MedicalRecord.csproj.GenerateResource.Cache
+G:\NewDesktop\MedicalRecord\MedicalRecord\obj\Debug\MedicalRecord.exe
+G:\NewDesktop\MedicalRecord\MedicalRecord\obj\Debug\MedicalRecord.pdb
+G:\NewDesktop\MedicalRecord\MedicalRecord\obj\Debug\MedicalRecord.login.resources
+G:\NewDesktop\MedicalRecord\MedicalRecord\obj\Debug\MedicalRecord.Signup.resources
+G:\NewDesktop\MedicalRecord\MedicalRecord\obj\Debug\MedicalRecord.Add.resources
