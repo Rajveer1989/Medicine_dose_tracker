@@ -16,7 +16,7 @@ namespace MedicalRecord
         {
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
-            //this.ShowInTaskbar = false;
+            this.ShowInTaskbar = false;
             this.MinimizeBox = false;
             this.MaximizeBox = false;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -84,6 +84,7 @@ namespace MedicalRecord
                      lblerror.ForeColor = Color.Green;
                      lblerror.Text = "Succesfully completed user registration";
                      ClearAll();
+                    session.CreateSession(txtuserid.Text);
                      this.Hide();
                      login obj = new login();
                      obj.Show();

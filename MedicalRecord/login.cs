@@ -18,9 +18,10 @@ namespace MedicalRecord
             InitializeComponent();
             this.Text = "User Login";
             //this.ShowIcon = false;
-            //this.ShowInTaskbar = false;
+            this.ShowInTaskbar = false;
             this.MinimizeBox = false;
             this.MaximizeBox = false;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
             StartPosition = FormStartPosition.CenterScreen;
             
         }
@@ -93,6 +94,11 @@ namespace MedicalRecord
                     this.Hide();
                 }
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

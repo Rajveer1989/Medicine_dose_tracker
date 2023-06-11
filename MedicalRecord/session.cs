@@ -49,22 +49,31 @@ namespace MedicalRecord
    {
        public static string GetName(string userid)
        {
-           string name = string.Empty;
-           SqlConnection con = new SqlConnection(Connectionstrings.ConString);
-           SqlCommand cmd = new SqlCommand();
-           cmd.CommandText = "_sp_GetName";
-           cmd.CommandType = CommandType.StoredProcedure;
-           cmd.Connection = con;
-           cmd.Parameters.Add("@username", SqlDbType.VarChar).Value = userid.ToString();
-           con.Open();
-           SqlDataReader dr = cmd.ExecuteReader();
-           if (dr.HasRows)
-           {
-               if (dr.Read())
-               {
-                   name = dr["username"].ToString();
-               }
-           }
+            string name = string.Empty;
+            try
+            {
+               
+                SqlConnection con = new SqlConnection(Connectionstrings.ConString);
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = "_sp_GetName";
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Connection = con;
+                cmd.Parameters.Add("@username", SqlDbType.VarChar).Value = userid.ToString();
+                con.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.HasRows)
+                {
+                    if (dr.Read())
+                    {
+                        name = dr["username"].ToString();
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+                Console.WriteLine("Error occured"); ;
+            }
            return name;
        }
       

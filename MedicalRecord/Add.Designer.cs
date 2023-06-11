@@ -39,41 +39,54 @@
             this.txtdosabge = new System.Windows.Forms.TextBox();
             this.txtfrequ = new System.Windows.Forms.TextBox();
             this.lblerror = new System.Windows.Forms.Label();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label4 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnsave
             // 
-            this.btnsave.BackColor = System.Drawing.Color.White;
+            this.btnsave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(92)))), ((int)(((byte)(132)))));
             this.btnsave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnsave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnsave.FlatAppearance.BorderSize = 0;
+            this.btnsave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnsave.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnsave.Location = new System.Drawing.Point(249, 224);
+            this.btnsave.ForeColor = System.Drawing.Color.White;
+            this.btnsave.Location = new System.Drawing.Point(213, 323);
+            this.btnsave.Margin = new System.Windows.Forms.Padding(4);
             this.btnsave.Name = "btnsave";
-            this.btnsave.Size = new System.Drawing.Size(89, 34);
+            this.btnsave.Size = new System.Drawing.Size(139, 42);
             this.btnsave.TabIndex = 0;
-            this.btnsave.Text = "Save";
+            this.btnsave.Text = "Add / Update";
             this.btnsave.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnsave.UseVisualStyleBackColor = false;
+            this.btnsave.Click += new System.EventHandler(this.btnsave_Click);
             // 
             // btncancle
             // 
-            this.btncancle.BackColor = System.Drawing.Color.White;
+            this.btncancle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(92)))), ((int)(((byte)(132)))));
+            this.btncancle.FlatAppearance.BorderSize = 0;
+            this.btncancle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btncancle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btncancle.Location = new System.Drawing.Point(344, 224);
+            this.btncancle.ForeColor = System.Drawing.Color.White;
+            this.btncancle.Location = new System.Drawing.Point(487, 323);
+            this.btncancle.Margin = new System.Windows.Forms.Padding(4);
             this.btncancle.Name = "btncancle";
-            this.btncancle.Size = new System.Drawing.Size(93, 34);
+            this.btncancle.Size = new System.Drawing.Size(95, 42);
             this.btncancle.TabIndex = 1;
-            this.btncancle.Text = "Cancle";
+            this.btncancle.Text = "Reset";
             this.btncancle.UseVisualStyleBackColor = false;
+            this.btncancle.Click += new System.EventHandler(this.btncancle_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(116, 49);
+            this.label1.Location = new System.Drawing.Point(109, 57);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 19);
+            this.label1.Size = new System.Drawing.Size(136, 22);
             this.label1.TabIndex = 2;
             this.label1.Text = "Medicine Name";
             // 
@@ -81,9 +94,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(116, 93);
+            this.label2.Location = new System.Drawing.Point(109, 114);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 19);
+            this.label2.Size = new System.Drawing.Size(74, 22);
             this.label2.TabIndex = 3;
             this.label2.Text = "Dosage ";
             // 
@@ -91,60 +105,94 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(116, 145);
+            this.label3.Location = new System.Drawing.Point(109, 202);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 19);
+            this.label3.Size = new System.Drawing.Size(97, 22);
             this.label3.TabIndex = 4;
             this.label3.Text = "Frequency ";
             // 
             // txtmedicine
             // 
             this.txtmedicine.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtmedicine.Location = new System.Drawing.Point(249, 49);
+            this.txtmedicine.Location = new System.Drawing.Point(286, 55);
+            this.txtmedicine.Margin = new System.Windows.Forms.Padding(4);
             this.txtmedicine.Name = "txtmedicine";
-            this.txtmedicine.Size = new System.Drawing.Size(188, 26);
+            this.txtmedicine.Size = new System.Drawing.Size(344, 30);
             this.txtmedicine.TabIndex = 5;
-            this.txtmedicine.Validating += new System.ComponentModel.CancelEventHandler(this.txtmedicine_Validating);
-            this.txtmedicine.Validated += new System.EventHandler(this.txtmedicine_Validated);
             // 
             // txtdosabge
             // 
             this.txtdosabge.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtdosabge.Location = new System.Drawing.Point(249, 94);
+            this.txtdosabge.Location = new System.Drawing.Point(286, 111);
+            this.txtdosabge.Margin = new System.Windows.Forms.Padding(4);
             this.txtdosabge.Name = "txtdosabge";
-            this.txtdosabge.Size = new System.Drawing.Size(188, 26);
+            this.txtdosabge.Size = new System.Drawing.Size(344, 30);
             this.txtdosabge.TabIndex = 6;
-            this.txtdosabge.Validating += new System.ComponentModel.CancelEventHandler(this.txtdosabge_Validating);
-            this.txtdosabge.Validated += new System.EventHandler(this.txtdosabge_Validated);
             // 
             // txtfrequ
             // 
             this.txtfrequ.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtfrequ.Location = new System.Drawing.Point(249, 144);
+            this.txtfrequ.Location = new System.Drawing.Point(286, 170);
+            this.txtfrequ.Margin = new System.Windows.Forms.Padding(4);
+            this.txtfrequ.Multiline = true;
             this.txtfrequ.Name = "txtfrequ";
-            this.txtfrequ.Size = new System.Drawing.Size(188, 26);
+            this.txtfrequ.Size = new System.Drawing.Size(344, 91);
             this.txtfrequ.TabIndex = 7;
-            this.txtfrequ.Validating += new System.ComponentModel.CancelEventHandler(this.txtfrequ_Validating);
-            this.txtfrequ.Validated += new System.EventHandler(this.txtfrequ_Validated);
             // 
             // lblerror
             // 
             this.lblerror.AutoSize = true;
             this.lblerror.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblerror.Location = new System.Drawing.Point(228, 189);
+            this.lblerror.Location = new System.Drawing.Point(263, 297);
+            this.lblerror.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblerror.Name = "lblerror";
-            this.lblerror.Size = new System.Drawing.Size(0, 19);
+            this.lblerror.Size = new System.Drawing.Size(0, 22);
             this.lblerror.TabIndex = 8;
             // 
-            // errorProvider1
+            // timer1
             // 
-            this.errorProvider1.ContainerControl = this;
+            this.timer1.Interval = 3000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.Location = new System.Drawing.Point(591, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(160, 17);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "All field are mandatory(*)";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(92)))), ((int)(((byte)(132)))));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(360, 323);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(119, 42);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Delete";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Add
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(572, 276);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(763, 387);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.lblerror);
             this.Controls.Add(this.txtfrequ);
             this.Controls.Add(this.txtdosabge);
@@ -155,10 +203,10 @@
             this.Controls.Add(this.btncancle);
             this.Controls.Add(this.btnsave);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Add";
             this.Text = "Add";
             this.Load += new System.EventHandler(this.Add_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -175,6 +223,8 @@
         private System.Windows.Forms.TextBox txtdosabge;
         private System.Windows.Forms.TextBox txtfrequ;
         private System.Windows.Forms.Label lblerror;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button1;
     }
 }

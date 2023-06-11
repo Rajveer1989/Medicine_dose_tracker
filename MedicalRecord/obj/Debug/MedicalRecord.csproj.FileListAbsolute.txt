@@ -9,3 +9,16 @@ G:\NewDesktop\MedicalRecord\MedicalRecord\obj\Debug\MedicalRecord.pdb
 G:\NewDesktop\MedicalRecord\MedicalRecord\obj\Debug\MedicalRecord.login.resources
 G:\NewDesktop\MedicalRecord\MedicalRecord\obj\Debug\MedicalRecord.Signup.resources
 G:\NewDesktop\MedicalRecord\MedicalRecord\obj\Debug\MedicalRecord.Add.resources
+E:\Github_project\MedicinTraker\MedicalRecord\bin\Debug\MedicalRecord.exe
+E:\Github_project\MedicinTraker\MedicalRecord\bin\Debug\MedicalRecord.pdb
+E:\Github_project\MedicinTraker\MedicalRecord\obj\Debug\MedicalRecord.csproj.AssemblyReference.cache
+E:\Github_project\MedicinTraker\MedicalRecord\obj\Debug\MedicalRecord.Add.resources
+E:\Github_project\MedicinTraker\MedicalRecord\obj\Debug\MedicalRecord.DeshBoard.resources
+E:\Github_project\MedicinTraker\MedicalRecord\obj\Debug\MedicalRecord.login.resources
+E:\Github_project\MedicinTraker\MedicalRecord\obj\Debug\MedicalRecord.Properties.Resources.resources
+E:\Github_project\MedicinTraker\MedicalRecord\obj\Debug\MedicalRecord.Signup.resources
+E:\Github_project\MedicinTraker\MedicalRecord\obj\Debug\MedicalRecord.csproj.GenerateResource.cache
+E:\Github_project\MedicinTraker\MedicalRecord\obj\Debug\MedicalRecord.csproj.CoreCompileInputs.cache
+E:\Github_project\MedicinTraker\MedicalRecord\obj\Debug\MedicalRecord.exe
+E:\Github_project\MedicinTraker\MedicalRecord\obj\Debug\MedicalRecord.pdb
+E:\Github_project\MedicinTraker\MedicalRecord\obj\Debug\MedicalRecord.ViewRecord.resources
