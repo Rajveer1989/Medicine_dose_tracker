@@ -1,0 +1,70 @@
+USE [Medical]
+GO
+/****** Object:  Table [dbo].[medicaltrack]    Script Date: 12-06-2023 22:08:22 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[medicaltrack](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[Medicine_Name] [varchar](30) NULL,
+	[Dosage] [varchar](30) NULL,
+	[Frequency] [varchar](40) NULL,
+	[UserID] [varchar](30) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[users]    Script Date: 12-06-2023 22:08:22 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[users](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[userid] [varchar](30) NULL,
+	[username] [varchar](30) NULL,
+	[password] [varchar](max) NULL,
+	[created] [varchar](max) NULL,
+	[lastlogin] [varchar](max) NULL,
+	[login_status] [varchar](30) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  StoredProcedure [dbo].[_sp_GetName]    Script Date: 12-06-2023 22:08:22 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+create proc [dbo].[_sp_GetName]
+@username varchar(30)
+as begin
+select username from users where userid=@username
+end
+GO
+/****** Object:  StoredProcedure [dbo].[_sp_loginStatus]    Script Date: 12-06-2023 22:08:22 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+create proc [dbo].[_sp_loginStatus]
+@username varchar(30)
+as begin
+select login_status from users where userid=@username
+end
+GO
