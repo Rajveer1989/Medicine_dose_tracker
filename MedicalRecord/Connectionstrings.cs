@@ -7,7 +7,7 @@ namespace MedicalRecord
 {
    public static class Connectionstrings
     {
-        static string _conString = "data source=DESKTOP-TC0BD70;database=Medical;uid=sa;pwd=master;";
+        static string _conString = "data source=BASLAB;database=Medical;uid=sa;pwd=master;";
 
         public static string ConString
         {

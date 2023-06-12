@@ -22,6 +22,7 @@ namespace MedicalRecord
             InitializeComponent();
             this.MaximizeBox = false;
             this.MinimizeBox = false;
+            this.ShowInTaskbar = false;
             StartPosition = FormStartPosition.CenterScreen;
 
         }

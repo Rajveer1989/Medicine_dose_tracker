@@ -71,10 +71,11 @@ namespace MedicalRecord
                     return;
                     //txtconfirmpass.Focus();
                 }
+                string hashpass = encryptPassword.EncryptedPassword(txtconfirmpass.Text);
 
                 SqlConnection con = new SqlConnection(Connectionstrings.ConString);
                 SqlCommand cmd = new SqlCommand();
-                cmd.CommandText = "insert into Users values('" + txtuserid.Text + "','" + txtname.Text + "','" + txtconfirmpass.Text + "','"+date+"','"+null+"')";
+                cmd.CommandText = "insert into Users values('" + txtuserid.Text + "','" + txtname.Text + "','" +hashpass + "','"+date+"','"+null+"','login')";
                 cmd.Connection = con;
                  con.Open();
                  int res = (int)cmd.ExecuteNonQuery();
@@ -82,12 +83,15 @@ namespace MedicalRecord
                  {
                      button1.Visible = true;
                      lblerror.ForeColor = Color.Green;
-                     lblerror.Text = "Succesfully completed user registration";
-                     ClearAll();
-                    session.CreateSession(txtuserid.Text);
-                     this.Hide();
-                     login obj = new login();
-                     obj.Show();
+                     usercreate.Lastloginuser(txtuserid.Text);
+                     session.CreateSession(txtuserid.Text);
+                     MessageBox.Show("Succesfully completed user registration","Success",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                     ClearAll();                     
+                     //this.Hide();
+                     //DeshBoard obj = new DeshBoard();
+                     //obj.Hide();
+                     //obj.Show();
+                     Application.Restart();
                  }
                  else
                  {

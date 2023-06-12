@@ -7,12 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using Microsoft.Win32;
 
 namespace MedicalRecord
 {
     public partial class login : Form
     {
         public static string Username = "";
+       
         public login()
         {
             InitializeComponent();
@@ -29,14 +31,49 @@ namespace MedicalRecord
         {           
 
         }
+        
+        public bool UpdateLoginStatus(string userid)
+        {
+            try
+            {
+                SqlConnection con = new SqlConnection(Connectionstrings.ConString);
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = con;
+                cmd.CommandText = "update users set login_status='login' where userid='" + userid + "'";
+                cmd.CommandType = CommandType.Text;
+                con.Open();
+                int res = (int)cmd.ExecuteNonQuery();
+                if (res == 1)
+                {
+                    return true;
+                }
+                return false;
+
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+        }
         private void btnlogin_Click(object sender, EventArgs e)
         {
             if (LoginDetails.Isvalidate(txtuserid.Text, txtpassword.Text))
             {
-                session.CreateSession(txtuserid.Text);
-                DeshBoard obj = new DeshBoard();
-                this.Hide();
-               // obj.Show();
+                bool loginstatus = UpdateLoginStatus(txtuserid.Text);
+                if (loginstatus)
+                {
+                    usercreate.Lastloginuser(txtuserid.Text);
+                    session.CreateSession(txtuserid.Text);
+                    DeshBoard obj = new DeshBoard();
+                    this.Hide();
+                    // obj.Show();
+                }
+                else
+                {
+                    MessageBox.Show("login failed, try again", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return;
+                }
 
             }
             else

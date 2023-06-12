@@ -1,6 +1,5 @@
 G:\NewDesktop\MedicalRecord\MedicalRecord\bin\Debug\MedicalRecord.exe
 G:\NewDesktop\MedicalRecord\MedicalRecord\bin\Debug\MedicalRecord.pdb
-G:\NewDesktop\MedicalRecord\MedicalRecord\obj\Debug\MedicalRecord.csprojResolveAssemblyReference.cache
 G:\NewDesktop\MedicalRecord\MedicalRecord\obj\Debug\MedicalRecord.DeshBoard.resources
 G:\NewDesktop\MedicalRecord\MedicalRecord\obj\Debug\MedicalRecord.Properties.Resources.resources
 G:\NewDesktop\MedicalRecord\MedicalRecord\obj\Debug\MedicalRecord.csproj.GenerateResource.Cache
@@ -22,3 +21,5 @@ E:\Github_project\MedicinTraker\MedicalRecord\obj\Debug\MedicalRecord.csproj.Cor
 E:\Github_project\MedicinTraker\MedicalRecord\obj\Debug\MedicalRecord.exe
 E:\Github_project\MedicinTraker\MedicalRecord\obj\Debug\MedicalRecord.pdb
 E:\Github_project\MedicinTraker\MedicalRecord\obj\Debug\MedicalRecord.ViewRecord.resources
+G:\NewDesktop\MedicalRecord\MedicalRecord\obj\Debug\MedicalRecord.ViewRecord.resources
+G:\NewDesktop\MedicalRecord\MedicalRecord\obj\Debug\MedicalRecord.wait.resources
