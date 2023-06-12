@@ -50,7 +50,7 @@ namespace MedicalRecord
         void _worker_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
             progressBar1.Value = e.ProgressPercentage;
-            label1.ForeColor = Color.Green;
+            label1.ForeColor = Color.White;
             label1.Text = "Please wait ..." + progressBar1.Value.ToString()+"%";
         }
 

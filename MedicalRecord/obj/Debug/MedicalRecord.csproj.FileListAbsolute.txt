@@ -23,3 +23,4 @@ E:\Github_project\MedicinTraker\MedicalRecord\obj\Debug\MedicalRecord.pdb
 E:\Github_project\MedicinTraker\MedicalRecord\obj\Debug\MedicalRecord.ViewRecord.resources
 G:\NewDesktop\MedicalRecord\MedicalRecord\obj\Debug\MedicalRecord.ViewRecord.resources
 G:\NewDesktop\MedicalRecord\MedicalRecord\obj\Debug\MedicalRecord.wait.resources
+E:\Github_project\MedicinTraker\MedicalRecord\obj\Debug\MedicalRecord.wait.resources

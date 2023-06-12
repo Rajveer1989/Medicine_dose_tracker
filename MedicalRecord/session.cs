@@ -86,26 +86,28 @@ namespace MedicalRecord
            string status = string.Empty;
            try
            {
-
-               SqlConnection con = new SqlConnection(Connectionstrings.ConString);
-               SqlCommand cmd = new SqlCommand();
-               cmd.CommandText = "_sp_loginStatus";
-               cmd.CommandType = CommandType.StoredProcedure;
-               cmd.Connection = con;
-               cmd.Parameters.Add("@username", SqlDbType.VarChar).Value = userid.ToString();
-               con.Open();
-               SqlDataReader dr = cmd.ExecuteReader();
-               if (dr.HasRows)
-               {
-                   if (dr.Read())
-                   {
-                       status = dr["login_status"].ToString();
-                   }
-               }
-               if (status == "login")
-               {
-                   session.CreateSession(userid);
-               }
+                if (userid != null)
+                {
+                    SqlConnection con = new SqlConnection(Connectionstrings.ConString);
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.CommandText = "_sp_loginStatus";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Connection = con;
+                    cmd.Parameters.Add("@username", SqlDbType.VarChar).Value = userid.ToString();
+                    con.Open();
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    if (dr.HasRows)
+                    {
+                        if (dr.Read())
+                        {
+                            status = dr["login_status"].ToString();
+                        }
+                    }
+                    if (status == "login")
+                    {
+                        session.CreateSession(userid);
+                    }
+                }
 
            }
            catch (Exception)

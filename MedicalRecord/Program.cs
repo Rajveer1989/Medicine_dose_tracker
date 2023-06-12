@@ -10,7 +10,7 @@ namespace MedicalRecord
     static class Program
     {
         public static string path = @"Medical\username";
-      
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -20,29 +20,33 @@ namespace MedicalRecord
             string username = GetUserName();
             Database.GetloginStatus(username);
 
-            using (Mutex mutex=new Mutex(false,"Medicine"))
+            using (Mutex mutex = new Mutex(false, "Medicine"))
             {
-                if(!mutex.WaitOne(500,false))
+                if (!mutex.WaitOne(500, false))
                 {
-                    MessageBox.Show("Application already running","Message",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    MessageBox.Show("Application already running", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
 
                 }
                 else
                 {
-                     Application.EnableVisualStyles();
-                     Application.SetCompatibleTextRenderingDefault(false);
-                     Application.Run(new wait());
+                    Application.EnableVisualStyles();
+                    Application.SetCompatibleTextRenderingDefault(false);
+                    Application.Run(new wait());
                 }
-                
+
             }
-           
+
         }
         public static string GetUserName()
         {
+            string username = "";
             RegistryKey key = Registry.CurrentUser.OpenSubKey(path);
-            string username = (string)key.GetValue("lastuser");
-            key.Close();
+            if (key != null)
+            {
+                 username = (string)key.GetValue("lastuser");
+                key.Close();
+            }
             return username;
         }
     }
