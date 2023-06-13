@@ -199,10 +199,18 @@ namespace MedicalRecord
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DialogResult dialog = MessageBox.Show("Are you sure you want delete this record ?", "Confirm delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dialog == DialogResult.Yes)
+            if (IDs > 0)
             {
-                DeleteData();
+                DialogResult dialog = MessageBox.Show("Are you sure you want delete this record ?", "Confirm delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialog == DialogResult.Yes)
+                {
+                    DeleteData();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select any record from view data form then  you can delete it.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
             }
         }
     }
